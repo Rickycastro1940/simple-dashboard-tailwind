@@ -1,41 +1,29 @@
-# HTML Hello
+# Simple Dashboard (Tailwind CSS v4)
 
-The most basic boilerplate for any 4Geeks Academy student, start your very first website from scratch.
+Academy deliverable: **A simple Dashboard with Tailwind CSS**. Static HTML + Tailwind v4 CDN + `styles.css` media queries for phone / tablet / desktop.
 
-> There is a video tutorial on [how to use this template to create your very first website here](https://youtu.be/dfbDCMu_p-0).
+This folder is the resubmission that adds the missing middle **performance drivers** block and a **KPI section heading**. It can also be copied into the standalone submission repo `Rickycastro1940/simple-dashboard-tailwind` if graders expect that URL.
 
-## What to do next?
+## Layout (three blocks)
 
-Create an `index.html` file with the [basic HTML structure](http://4geeks.com/lesson/what-is-html-learn-html#page-structure) and see it live by running a web-server using the following command:
+1. **Key performance indicators** — four outcome KPI cards under a clear `h2`
+2. **Performance drivers** — three widgets (sales by channel, top products, fulfillment funnel)
+3. **Operational details** — recent orders table + team notes
+
+## Run
 
 ```bash
-$ pip3 install flask && python3 server.py
+cd uis/simple-dashboard
+pip3 install flask
+python3 server.py
 ```
 
-- You can create as many HTML files as you want.
-- You can also create CSS files and import them into your website using a `<link>` tag placed between the `<head></head>` tags, like this:
+Open `http://localhost:3000/`.
 
-```html
-<head>
-  ...
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
+| File | Role |
+| --- | --- |
+| `index.html` | Full semantic structure + Tailwind v4 utilities |
+| `styles.css` | Layout helpers and `@media` at `640px`, `1024px`, `1280px` |
+| `server.py` | Local static server from the html-hello template |
 
-- If you want to use Tailwind CSS, add it optionally via the official Tailwind CSS v4 CDN inside the same `<head>`:
-
-```html
-<head>
-  ...
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
-
-### Contributors
-
-This template was built as part of the [Full Stack Developer course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer) at [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and [many other contributors](https://github.com/4GeeksAcademy/html-hello/graphs/contributors).
-
-You can find other templates and resources like this at the [school's GitHub page](https://github.com/4geeksacademy/).
+Uses `@tailwindcss/browser@4` (not the legacy v3 `cdn.tailwindcss.com` snippet).
